@@ -4,6 +4,6 @@ The Map/Reduce framework requires mapper and reducer functions, where the map fu
 
 We will now apply this framework in the following examples:
   - [Wordcount](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/map-reduce/wordcount-assignment)
-  - [Joining Data](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/map-reduce)
+  - [Joining Data](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/map-reduce/joining-data-assignment)
     * [Simple Join](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/map-reduce/joining-data-assignment/simple-join)
     * [Advanced Join](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/map-reduce/joining-data-assignment/advanced-join)
