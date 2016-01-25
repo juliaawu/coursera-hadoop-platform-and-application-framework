@@ -2,7 +2,7 @@
 import sys
 
 # --------------------------------------------------------------------------
-#This reducer code will input <show, view_count> and <show, channel>
+#This reducer code will input <show, viewer_count> and <show, channel>
 #input files and return viewer counts for tv shows that air on ABC.
 # Note the input will come as a group of lines with same show (ie the key)
 # As it reads words it will hold on to the value field
@@ -26,7 +26,7 @@ import sys
 prev_show          = " "                #initialize previous show to blank string
 
 is_abc             = 0 #indicate shows on abc
-view_total         = 0 #sum views
+viewer_total         = 0 #sum viewers
 # see https://docs.python.org/2/tutorial/datastructures.html for list details
 
 line_cnt           = 0  #count input lines
@@ -51,10 +51,10 @@ for line in sys.stdin:
 	#now write out the join result, but not for the first line input
         # -----------------------
         if line_cnt>1 and is_abc==1:
-	    print('{0} {1}'.format(prev_show,view_total))
+	    print('{0} {1}'.format(prev_show,viewer_total))
             #now reset lists
 	is_abc = 0
-        view_total = 0
+        viewer_total = 0
         prev_show = curr_show  #set up previous show for the next set of input lines
 
 	
@@ -62,8 +62,8 @@ for line in sys.stdin:
     #whether or not the join result was written out, 
     #   now process the curr show    
   	
-    #determine if its from file <show, view_count> or <show, channel>
-    # and add up the total views
+    #determine if its from file <show, viewer_count> or <show, channel>
+    # and add up the total viewers
     # ---------------------------------------------------------------
     if value_in == 'ABC': 
         
@@ -71,9 +71,9 @@ for line in sys.stdin:
 
     else:
 
-        view_total += int(value_in)
+        viewer_total += int(value_in)
 
 # ---------------------------------------------------------------
 #now write out the LAST join result
 # ---------------------------------------------------------------
-print('{0} {1}'.format(curr_show,view_total))
+print('{0} {1}'.format(curr_show,viewer_total))
