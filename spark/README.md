@@ -9,6 +9,6 @@ Spark - same features of map/reduce but more
    - In-memory caching of data
    - Native Python, Scala interface; interactive shells
    
-We will repeat the join exercises in spark:
+We will do some join exercises in spark:
   - [Simple Join](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/spark/simple-join-assignment)
   - [Advanced Join](https://github.com/juliaawu/coursera-hadoop-platform-and-application-framework/tree/master/spark/advanced-join-assignment)
